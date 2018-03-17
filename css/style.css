@@ -1,0 +1,35 @@
+ body {
+    background: url(http://htmlbook.ru/example/images/city.png) repeat-x 0 100% fixed,
+                url(http://htmlbook.ru/example/images/cloud.png) no-repeat fixed,
+                url(http://htmlbook.ru/example/images/cloud.png) no-repeat fixed,
+                linear-gradient(to top, #5080b1, #004e8c) fixed;
+    animation: city 60s linear infinite;
+}
+@keyframes city {
+    from { background-position: -1000px 100%, 120% 30%, 120% 15%, 0 0;}
+    to { background-position: 0 100%, -200% 10%, -50% 15%, 0 0; }
+}
+blockquote {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10%;
+    font-size: 1.5em;
+    color: white;
+}
+blockquote:before, blockquote:after {
+    font-size: 3em;
+    color: #d7d2ff;
+} 
+blockquote:before {
+    content: '«';
+    float: left;
+    margin-top: -1em;
+}
+blockquote:after {
+    content: '»';
+    float: right;
+    margin-top: -1em;
+}
+blockquote p { 
+    margin: 2em 3em; 
+}

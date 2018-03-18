@@ -21,22 +21,31 @@ var quote = [
 ];
 
 var _quote = document.getElementById('quote');
-_quote.innerHTML = "Сборник цитат великих и известных людей. Обновление каждые 10 сек.";
 var _autor = document.getElementById('autor');
- 
-window.onload = function randomQuote() {
-    setInterval(function(){
-        setTimeout(function(){ 
-            
-            var rand_quote = Math.floor(Math.random()*quote.length);
-            var rand_text = quote[rand_quote];
-            
-            for (key in rand_text) {                
-                _quote.innerHTML = rand_text['quot'];
-                _autor.innerHTML = rand_text['name'];
-            };
-            document.getElementById('second').innerHTML = second;
-        }, 100);
-    }, 10000);
+
+function randomQuote() {
+
+    var rand_quote = Math.floor(Math.random()*quote.length);
+    var rand_text = quote[rand_quote];
+
+    _quote.innerHTML = rand_text['quot'];
+    _autor.innerHTML = rand_text['name'];
 };
+
+randomQuote();
+
+function timer(){
+
+    var divT = document.getElementById('timer');
+    divT.innerHTML--;
+
+    if(divT.innerHTML==0){
+        randomQuote();
+        divT.innerHTML = '11';
+        timer();
+    } else {
+        setTimeout(timer,1000);
+    };
+};
+
 

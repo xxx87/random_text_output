@@ -12,7 +12,7 @@
 blockquote {
     width: 500px;
     margin: 0 auto;
-    padding: 10%;
+    padding: 4%;
     font-size: 1.5em;
     color: white;
 }
@@ -32,4 +32,10 @@ blockquote:after {
 }
 blockquote p { 
     margin: 2em 3em; 
+}
+#timer {
+    width: 10px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    color: white;
 }
